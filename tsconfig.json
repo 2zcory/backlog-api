@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "types": ["gas-types-detailed"],
+    "target": "ES2020", // Specify ECMAScript target version.
+    "module": "CommonJS", // Module system for Node.js.
+    "declaration": true, // Generate `.d.ts` files for type definitions.
+    "outDir": "./dist", // Output directory for compiled files.
+    "strict": true, // Enable all strict type-checking options.
+    "esModuleInterop": true, // Enable compatibility with CommonJS.
+    "skipLibCheck": true, // Skip type checking of declaration files.
+    "forceConsistentCasingInFileNames": true // Ensure file name casing is consistent.
+  },
+  "include": ["src/**/*", "types/**/*"], // Include all TypeScript files in the `src` folder.
+  "exclude": ["node_modules", "dist"] // Exclude unnecessary files from compilation.
+}
