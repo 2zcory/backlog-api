@@ -43,6 +43,7 @@
     "README.md",
     "LICENSE",
     "types",
-    "index.d.ts"
+    "index.d.ts",
+    "tsconfig.json"
   ]
 }

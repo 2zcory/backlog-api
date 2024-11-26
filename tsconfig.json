@@ -11,5 +11,6 @@
     "forceConsistentCasingInFileNames": true // Ensure file name casing is consistent.
   },
   "include": ["src/**/*", "types/**/*"], // Include all TypeScript files in the `src` folder.
-  "exclude": ["node_modules", "dist"] // Exclude unnecessary files from compilation.
+  "exclude": ["node_modules", "dist"], // Exclude unnecessary files from compilation.
+  "files": ["index.d.ts"]
 }
