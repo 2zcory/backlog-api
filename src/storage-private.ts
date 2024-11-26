@@ -1,3 +1,5 @@
+import PropertyKeys from './property-keys';
+
 class StoragePrivate {
   static ps = PropertiesService.getUserProperties();
 
