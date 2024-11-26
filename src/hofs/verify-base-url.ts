@@ -30,4 +30,3 @@ const verifyBaseUrl =
   };
 
 export default verifyBaseUrl;
-WakeLock;
