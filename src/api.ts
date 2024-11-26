@@ -20,7 +20,7 @@ const fetch = verifyBaseUrl(
 const parseQuery = verifyApiKey((query?: GoogleAppsScript.URL_Fetch.Query) => {
   // TODO: Check ApiKey
   const apiKey = StoragePrivate.getApiKey();
-  const result = `?$apiKey=${apiKey}`;
+  const result = `?apiKey=${apiKey}`;
 
   if (!query) return result;
   const queryString = Object.entries(query)

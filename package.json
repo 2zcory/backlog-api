@@ -4,7 +4,7 @@
   "description": "This package supports making api call to the Backlog service",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
-  "types": "index.d.ts",
+  "types": "dist/index.d.ts",
   "exports": {
     ".": {
       "import": "./dist/index.mjs",
@@ -31,7 +31,7 @@
   },
   "homepage": "https://github.com/2zcory/backlog-api#readme",
   "devDependencies": {
-    "@iztypes/backlog-api": "^1.0.0",
+    "@iztypes/backlog-api": "^1.0.1",
     "@types/node": "^22.9.1",
     "eslint": "^9.15.0",
     "gas-types-detailed": "^1.1.2",
