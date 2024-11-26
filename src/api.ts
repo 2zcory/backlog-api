@@ -8,6 +8,9 @@ const fetch = verifyBaseUrl(
     params?: Partial<GoogleAppsScript.URL_Fetch.RequestOptions>
   ) => {
     const baseUrl = StoragePrivate.getBaseUrl();
+    SpreadsheetApp.getActiveSpreadsheet().toast(
+      `Fetching: ${baseUrl}${endpoint}`
+    );
 
     // TODO: Check config.baseUrl
     return UrlFetchApp.fetch(`${baseUrl}${endpoint}`, {
@@ -63,9 +66,6 @@ class ApiFetch {
     TQuery extends
       GoogleAppsScript.URL_Fetch.Query = GoogleAppsScript.URL_Fetch.Query,
   >(endpoint: string, query: TQuery) {
-    SpreadsheetApp.getActiveSpreadsheet().toast(
-      `Fetching: ${endpoint}${parseQuery(query)}`
-    );
     const raw = fetch(`${endpoint}${parseQuery(query)}`);
 
     return parseResponse<TResData>(raw);
