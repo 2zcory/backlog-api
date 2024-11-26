@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "types": ["gas-types-detailed"],
+    "types": ["gas-types-detailed", "@iztypes/backlog-api"],
     "target": "ESNext", // Specify ECMAScript target version.
     "module": "ESNext", // Module system for Node.js.
     "declaration": true, // Generate `.d.ts` files for type definitions.
@@ -12,5 +12,4 @@
   },
   "include": ["src/**/*", "types/**/*"], // Include all TypeScript files in the `src` folder.
   "exclude": ["node_modules", "dist"], // Exclude unnecessary files from compilation.
-  "files": ["index.d.ts"]
 }

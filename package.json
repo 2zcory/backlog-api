@@ -31,6 +31,7 @@
   },
   "homepage": "https://github.com/2zcory/backlog-api#readme",
   "devDependencies": {
+    "@iztypes/backlog-api": "^1.0.0",
     "@types/node": "^22.9.1",
     "eslint": "^9.15.0",
     "gas-types-detailed": "^1.1.2",
@@ -43,7 +44,6 @@
     "README.md",
     "LICENSE",
     "types",
-    "index.d.ts",
-    "tsconfig.json"
+    "index.d.ts"
   ]
 }
