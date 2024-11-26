@@ -8,12 +8,12 @@ const fetch = verifyBaseUrl(
     params?: Partial<GoogleAppsScript.URL_Fetch.RequestOptions>
   ) => {
     const baseUrl = StoragePrivate.getBaseUrl();
-    SpreadsheetApp.getActiveSpreadsheet().toast(
-      `Fetching: ${baseUrl}${endpoint}`
-    );
 
+    const url = `${baseUrl}${endpoint}`;
+
+    Logger.log(`Fetching ${url}`);
     // TODO: Check config.baseUrl
-    return UrlFetchApp.fetch(`${baseUrl}${endpoint}`, {
+    return UrlFetchApp.fetch(url, {
       muteHttpExceptions: true,
       ...params,
     });
