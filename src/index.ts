@@ -1,9 +1,3 @@
-class BacklogApi {
-  test() {
-    const query: GoogleAppsScript.URL_Fetch.Query = {};
-    const string = '3';
-    console.log(query, string);
-  }
-}
+import IssueApi from './features/issues.api';
 
-export default BacklogApi;
+export const BacklogIssueApi = IssueApi;
