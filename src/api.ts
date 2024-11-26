@@ -1,5 +1,6 @@
 import verifyApiKey from './hofs/verify-api-key';
 import verifyBaseUrl from './hofs/verify-base-url';
+import StoragePrivate from './storage-private';
 
 const fetch = verifyBaseUrl(
   (

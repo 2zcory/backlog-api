@@ -1,3 +1,5 @@
+import StoragePrivate from '../storage-private';
+
 const verifyBaseUrl =
   <TParams extends any[] = unknown[], TReturnValue = unknown>(
     cb: Callback<TParams, TReturnValue>

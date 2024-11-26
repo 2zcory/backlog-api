@@ -29,3 +29,5 @@ class StoragePrivate {
     return this.ps.setProperty(PropertyKeys.PRIVATE_BASE_URL, value);
   }
 }
+
+export default StoragePrivate;
