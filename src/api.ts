@@ -63,6 +63,9 @@ class ApiFetch {
     TQuery extends
       GoogleAppsScript.URL_Fetch.Query = GoogleAppsScript.URL_Fetch.Query,
   >(endpoint: string, query: TQuery) {
+    SpreadsheetApp.getActiveSpreadsheet().toast(
+      `Fetching: ${endpoint}${parseQuery(query)}`
+    );
     const raw = fetch(`${endpoint}${parseQuery(query)}`);
 
     return parseResponse<TResData>(raw);
