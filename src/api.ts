@@ -65,7 +65,7 @@ class ApiFetch {
     TResData = unknown,
     TQuery extends
       GoogleAppsScript.URL_Fetch.Query = GoogleAppsScript.URL_Fetch.Query,
-  >(endpoint: string, query: TQuery) {
+  >(endpoint: string, query?: TQuery) {
     const raw = fetch(`${endpoint}${parseQuery(query)}`);
 
     return parseResponse<TResData>(raw);

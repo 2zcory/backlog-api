@@ -17,7 +17,7 @@ enum Endpoints {
   ISSUE_TYPES = '/api/v2/projects/:projectId/issueTypes',
   MILESTONES = '/api/v2/projects/:projectId/versions',
   STATUSES = '/api/v2/projects/:projectId/statuses',
-  USERS = '/api/v2/projects/:projectId/users',
+  PROJECT_USERS = '/api/v2/projects/:projectId/users',
   MYSELF = '/api/v2/users/myself',
   PROJECTS = '/api/v2/projects',
   PROJECT_ADMINS = '/api/v2/projects/:projectId/administrators',
