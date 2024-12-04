@@ -13,7 +13,8 @@
   },
   "scripts": {
     "build": "tsup",
-    "preversion": "npm run build",
+    "test": "echo no test cases",
+    "prepublish": "pnpm build",
     "postversion": "git push && git push --tags"
   },
   "repository": {
@@ -42,8 +43,6 @@
   "files": [
     "dist",
     "README.md",
-    "LICENSE",
-    "types",
-    "index.d.ts"
+    "LICENSE"
   ]
 }

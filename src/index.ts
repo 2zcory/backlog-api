@@ -1,3 +1,4 @@
+import CategoryApi from './features/categories.api';
 import IssueTypeApi from './features/issue-types.api';
 import IssueApi from './features/issues.api';
 import MilestoneApi from './features/milestones.api';
@@ -12,5 +13,6 @@ export const BacklogMilestoneApi = MilestoneApi;
 export const BacklogStatusApi = StatusApi;
 export const BacklogProjectUserApi = ProjectUserApi;
 export const BacklogPriorityApi = PriorityApi;
+export const BacklogCategoryApi = CategoryApi;
 
 export const BacklogPrivate = StoragePrivate;
