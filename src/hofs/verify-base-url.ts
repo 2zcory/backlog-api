@@ -23,7 +23,7 @@ const verifyBaseUrl =
       }
 
       // TODO: check with regex pattern
-      StoragePublic.setBaseUrl(inputBaseUrl);
+      StoragePublic.setBaseUrl(inputBaseUrl.replace(/\/*$/, ''));
     }
 
     return cb(...args);
