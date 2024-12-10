@@ -1,11 +1,11 @@
-import StoragePrivate from '../storage-private';
+import StoragePublic from '../storage-public';
 
 const verifyBaseUrl =
   <TParams extends any[] = unknown[], TReturnValue = unknown>(
     cb: Callback<TParams, TReturnValue>
   ) =>
   (...args: TParams) => {
-    const baseUrl = StoragePrivate.getBaseUrl();
+    const baseUrl = StoragePublic.getBaseUrl();
 
     if (!baseUrl) {
       const inputBaseUrl = Browser.inputBox(
@@ -23,7 +23,7 @@ const verifyBaseUrl =
       }
 
       // TODO: check with regex pattern
-      StoragePrivate.setBaseUrl(inputBaseUrl);
+      StoragePublic.setBaseUrl(inputBaseUrl);
     }
 
     return cb(...args);

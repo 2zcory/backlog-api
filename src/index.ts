@@ -6,6 +6,7 @@ import PriorityApi from './features/priorities.api';
 import ProjectUserApi from './features/project-users.api';
 import StatusApi from './features/statuses.api';
 import StoragePrivate from './storage-private';
+import StoragePublic from './storage-public';
 
 export const BacklogIssueApi = IssueApi;
 export const BacklogIssueTypeApi = IssueTypeApi;
@@ -16,3 +17,4 @@ export const BacklogPriorityApi = PriorityApi;
 export const BacklogCategoryApi = CategoryApi;
 
 export const BacklogPrivate = StoragePrivate;
+export const BacklogPublic = StoragePublic;

@@ -22,14 +22,6 @@ class StoragePrivate {
   static setApiKey(value: string) {
     return this.ps.setProperty(PropertyKeys.PRIVATE_API_KEY, value);
   }
-
-  static getBaseUrl() {
-    return this.get<string>(PropertyKeys.PRIVATE_BASE_URL);
-  }
-
-  static setBaseUrl(value: string) {
-    return this.ps.setProperty(PropertyKeys.PRIVATE_BASE_URL, value);
-  }
 }
 
 export default StoragePrivate;

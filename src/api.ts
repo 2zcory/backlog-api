@@ -1,13 +1,14 @@
 import verifyApiKey from './hofs/verify-api-key';
 import verifyBaseUrl from './hofs/verify-base-url';
 import StoragePrivate from './storage-private';
+import StoragePublic from './storage-public';
 
 const fetch = verifyBaseUrl(
   (
     endpoint: string,
     params?: Partial<GoogleAppsScript.URL_Fetch.RequestOptions>
   ) => {
-    const baseUrl = StoragePrivate.getBaseUrl();
+    const baseUrl = StoragePublic.getBaseUrl();
 
     const url = `${baseUrl}${endpoint}`;
 
