@@ -9,6 +9,15 @@ class CategoryApi {
 
     return res;
   }
+
+  static post(projectId: number, payload: NSBacklog.PostPayload.Category) {
+    const res = ApiFetch.post<NSBacklog.Category>(
+      r(Endpoints.CATEGORIES, { projectId }),
+      payload
+    );
+
+    return res;
+  }
 }
 
 export default CategoryApi;
