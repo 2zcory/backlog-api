@@ -44,7 +44,9 @@ const parseQuery = verifyApiKey((query?: GoogleAppsScript.URL_Fetch.Query) => {
 });
 
 const parseResponse = <TDataRes = unknown>(
-  res: GoogleAppsScript.URL_Fetch.HTTPResponse | null
+  res: GoogleAppsScript.URL_Fetch.HTTPResponse | null,
+  query: GoogleAppsScript.URL_Fetch.Query = {},
+  payload: GoogleAppsScript.URL_Fetch.Payload = {}
 ) => {
   if (!res) return res;
 
@@ -54,6 +56,8 @@ const parseResponse = <TDataRes = unknown>(
 
   if (errors?.[0]) {
     Browser.msgBox(`${errors[0].code} - ${errors[0].message}`);
+    Logger.log(`🔺 Failed with query: ${query}`);
+    Logger.log(`🔺 Failed with payload: ${payload}`);
     // TODO: handle errors
     return null;
   }
@@ -69,7 +73,7 @@ class ApiFetch {
   >(endpoint: string, query?: TQuery) {
     const raw = fetch(`${endpoint}${parseQuery(query)}`);
 
-    return parseResponse<TResData>(raw);
+    return parseResponse<TResData>(raw, query);
   }
 
   static post<
@@ -83,7 +87,7 @@ class ApiFetch {
       payload: JSON.stringify(payload),
     });
 
-    return parseResponse<TResData>(raw);
+    return parseResponse<TResData>(raw, {}, payload);
   }
 
   static patch<
@@ -97,7 +101,7 @@ class ApiFetch {
       payload: JSON.stringify(payload),
     });
 
-    return parseResponse<TResData>(raw);
+    return parseResponse<TResData>(raw, {}, payload);
   }
 }
 
