@@ -56,8 +56,8 @@ const parseResponse = <TDataRes = unknown>(
 
   if (errors?.[0]) {
     Browser.msgBox(`${errors[0].code} - ${errors[0].message}`);
-    Logger.log(`🔺 Failed with query: ${query}`);
-    Logger.log(`🔺 Failed with payload: ${payload}`);
+    Logger.log(`🔺 Failed with query: ${JSON.stringify(query)}`);
+    Logger.log(`🔺 Failed with payload: ${JSON.stringify(payload)}`);
     // TODO: handle errors
     return null;
   }
