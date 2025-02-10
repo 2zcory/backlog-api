@@ -35,10 +35,9 @@ class IssueApi {
     return res;
   }
 
-  static patch(issueKey: string, payload: NSBacklog.PatchPayload.Issue) {
-    const res = ApiFetch.patch<NSBacklog.Issue>(
-      r(Endpoints.ISSUE, { key: issueKey }),
-      payload
+  static patch(issueKey: string) {
+    const res = ApiFetch.delete<NSBacklog.Issue>(
+      r(Endpoints.ISSUE, { key: issueKey })
     );
 
     return res;

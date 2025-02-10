@@ -103,6 +103,14 @@ class ApiFetch {
 
     return parseResponse<TResData>(raw, {}, payload);
   }
+
+  static delete<TResData = unknown>(endpoint: string) {
+    const raw = fetch(`${endpoint}${parseQuery()}`, {
+      method: 'delete',
+    });
+
+    return parseResponse<TResData>(raw);
+  }
 }
 
 export default ApiFetch;
