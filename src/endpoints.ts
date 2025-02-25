@@ -23,6 +23,7 @@ enum Endpoints {
   PROJECT_ADMINS = '/api/v2/projects/:projectId/administrators',
   PRIORITIES = '/api/v2/priorities',
   CATEGORIES = '/api/v2/projects/:projectId/categories',
+  USERS = '/api/v2/users',
 }
 
 export default Endpoints;
