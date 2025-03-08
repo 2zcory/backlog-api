@@ -22,6 +22,7 @@ enum Endpoints {
   PROJECTS = '/api/v2/projects',
   PROJECT_ADMINS = '/api/v2/projects/:projectId/administrators',
   PRIORITIES = '/api/v2/priorities',
+  COMMENTS = '/api/v2/issues/:issueIdOrKey/comments',
   CATEGORIES = '/api/v2/projects/:projectId/categories',
   USERS = '/api/v2/users',
 }

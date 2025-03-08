@@ -9,8 +9,8 @@ importers:
   .:
     devDependencies:
       '@iztypes/backlog-api':
-        specifier: ^1.0.3
-        version: 1.0.3
+        specifier: ^1.1.2
+        version: 1.1.2
       '@types/node':
         specifier: ^22.9.1
         version: 22.9.1
@@ -234,8 +234,8 @@ packages:
     resolution: {integrity: sha512-O8jcjabXaleOG9DQ0+ARXWZBTfnP4WNAqzuiJK7ll44AmxGKv/J2M4TPjxjY3znBCfvBXFzucm1twdyFybFqEA==}
     engines: {node: '>=12'}
 
-  '@iztypes/backlog-api@1.0.3':
-    resolution: {integrity: sha512-w8d49E5MAaefijk8ejONzpYqppU6fGGv9x1IoS7K1b+NfYgqE5o2xH8nh21UB4qjTByT0Y0kPsoAlmXG3ZaWhw==}
+  '@iztypes/backlog-api@1.1.2':
+    resolution: {integrity: sha512-2tJN2ENBGCn9e7gv7KSdltRb1LKphby2bnv3usb4HGyvS/d6G6pT4KPhFnTWbI5pvkGmIYENLGFwW4zB6ZZExA==}
 
   '@jridgewell/gen-mapping@0.3.5':
     resolution: {integrity: sha512-IzL8ZoEDIBRWEzlCcRhOaCupYyN5gdIK+Q6fbFdPDg6HqX6jpkItn7DFIpW9LQzXG6Df9sA7+OKnq0qlz/GaQg==}
@@ -1035,7 +1035,7 @@ snapshots:
       wrap-ansi: 8.1.0
       wrap-ansi-cjs: wrap-ansi@7.0.0
 
-  '@iztypes/backlog-api@1.0.3': {}
+  '@iztypes/backlog-api@1.1.2': {}
 
   '@jridgewell/gen-mapping@0.3.5':
     dependencies:
