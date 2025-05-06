@@ -55,10 +55,22 @@ const parseResponse = <TDataRes = unknown>(
   const { errors } = data as GoogleAppsScript.URL_Fetch.ErrorResponse;
 
   if (errors?.[0]) {
-    Browser.msgBox(`${errors[0].code} - ${errors[0].message}`);
     Logger.log(`🔺 Failed with query: ${JSON.stringify(query)}`);
     Logger.log(`🔺 Failed with payload: ${JSON.stringify(payload)}`);
     // TODO: handle errors
+    switch (errors[0].code) {
+      // AuthenticationError
+      case 11: {
+        StoragePrivate.setApiKey('');
+        Browser.msgBox(
+          `Please try again and enter your API key. Error code: ${errors[0].code}`
+        );
+        break;
+      }
+      default: {
+        Browser.msgBox(`${errors[0].code} - ${errors[0].message}`);
+      }
+    }
     return null;
   }
 
